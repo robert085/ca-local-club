@@ -14,8 +14,10 @@ let position = 0;
 
 document.addEventListener('scroll', (event) => {
   position = window.scrollY;
-  console.log(position);
-  heading.style.transform = `translateY(-${position}px)`
+  let calcPosition = position / 4;
+  console.log('real position: ', position);
+  console.log('calc. position: ', calcPosition);
+  heading.style.transform = `translateY(-${calcPosition}px)`
 });
 
 
